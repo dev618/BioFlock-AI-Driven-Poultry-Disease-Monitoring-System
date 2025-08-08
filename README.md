@@ -1,71 +1,55 @@
-# 🐔 Poultry Health Monitoring System (Deep Learning & Data Science)
+# BioFlock AI – AI-Driven Poultry Disease Monitoring
 
-**Technologies:** Python, TensorFlow, PyTorch, YOLOv8, OpenCV, Pandas, NumPy, Flask
-
----
-
-## 🧠 Overview
-AI-powered system for detecting poultry diseases through posture-based image analysis. Uses YOLOv8 for object detection and CNN for disease classification (e.g., coccidiosis, fowlpox). Designed to improve early disease diagnosis and farm health monitoring.
-
----
-
-## 🎯 Objectives
-- Detect and classify chickens as Normal or Abnormal
-- Identify specific diseases: Coccidiosis, Newcastle, Fowlpox, Leg Disease
-- Enable real-time monitoring with frame counting
-- Compare object detection and classification accuracy across two approaches
+![Python](https://img.shields.io/badge/Python-3.10-blue?logo=python)
+![Flask](https://img.shields.io/badge/Flask-Framework-black?logo=flask)
+![OpenCV](https://img.shields.io/badge/OpenCV-Computer%20Vision-green?logo=opencv)
+![YOLO](https://img.shields.io/badge/YOLO-Object%20Detection-red)
+![TensorFlow](https://img.shields.io/badge/TensorFlow-Deep%20Learning-orange?logo=tensorflow)
+![PyTorch](https://img.shields.io/badge/PyTorch-Deep%20Learning-red?logo=pytorch)
+![Pandas](https://img.shields.io/badge/Pandas-Data%20Analysis-yellow?logo=pandas)
+![NumPy](https://img.shields.io/badge/NumPy-Scientific%20Computing-blue?logo=numpy)
 
 ---
 
-## 🔍 Approach 1: Roboflow Labeling + YOLOv8 + CNN
+**Tags:**  
+[artificial-intelligence](#) [machine-learning](#) [deep-learning](#) [computer-vision](#) [yolo](#) [cnn](#) [opencv](#) [flask](#) [tensorflow](#) [pytorch](#) [pandas](#) [numpy](#) [poultry-disease-detection](#) [agriculture-tech](#) [smart-farming](#) [ai-in-agriculture](#) [livestock-monitoring](#) [edge-ai](#) [iot-integration](#) [end-to-end-project](#) [portfolio-project](#)  
 
-### 🔧 Data Collection & Labeling
-- Collected 500K+ chicken images
-- Labeled with Roboflow: 'Normal' vs 'Abnormal'
 
-### 📦 Object Detection (YOLOv8)
-- Trained on Google Colab
-- Detected chickens in images/videos with 98% accuracy
+> An AI-powered poultry health monitoring system leveraging **YOLO**, **CNN**, and **OpenCV** for real-time detection of diseases based on posture and behavioral analysis.
 
-### 🧠 Disease Classification (CNN)
-- Classified diseases with 92% accuracy
-- Final system accuracy: 96%
+## 📌 Overview
+BioFlock AI is designed to help poultry farmers monitor the health of their flocks using computer vision and deep learning. The system detects abnormal behavior patterns and predicts potential diseases early, enabling farmers to take preventive measures.
 
-### 🎥 Frame Counting
-- Counted Normal/Abnormal chickens across frames for real-time monitoring
+## 🚀 Features
+- **Real-time Monitoring** – Live video analysis using YOLO object detection.
+- **Disease Detection** – Posture and movement analysis to identify health issues.
+- **Dashboard Integration** – Centralized data visualization for decision-making.
+- **API Connectivity** – Flask API for easy integration with IoT devices or web apps.
+- **High Accuracy** – Trained on 500K+ annotated images.
 
----
+## 🛠️ Tech Stack
+- **Languages**: Python, jupyter
+- **Frameworks & Libraries**: YOLO, CNN, OpenCV, Flask
+- **Tools**: Git, GitHub
+- **Deployment**: Flask APIs + Dashboard
 
-## 🔁 Approach 2: YOLOv8 + Basic CNN Classification
 
-### 📸 Frame Extraction
-- Extracted multiple frames from labeled data for better training
 
-### 🧠 CNN Classification
-- Classified chickens as 'Normal' or 'Abnormal' (no disease-level classification)
+## 📊 How It Works
+1. **Capture** – Live camera feed or uploaded video/images.
+2. **Detect** – YOLO detects poultry and identifies individual postures.
+3. **Analyze** – CNN model classifies posture as healthy or abnormal.
+4. **Predict** – Alerts generated for suspected diseases.
+5. **Display** – Dashboard shows statistics and historical trends.
 
-### 🧪 Testing
-- Achieved 99% classification accuracy on frames
-- Some issues observed on video frame sequence
+## 🔧 Installation & Usage
+```bash
+# Clone repository
+git clone https://github.com/your-username/BioFlock-AI.git
+cd BioFlock-AI
 
----
+# Install dependencies
+pip install -r requirements.txt
 
-## 📊 Final Results
-
-| Task                        | Accuracy |
-|-----------------------------|----------|
-| Object Detection (YOLOv8)   | 98%      |
-| CNN Disease Classification  | 92%      |
-| Overall Model Accuracy      | 96%–99%  |
-
----
-
-## 🧪 Output
-- 🐔 Normal vs Abnormal classification
-- 🐔 Disease-specific detection: Fowlpox, Leg Disease, etc.
-- 📊 Frame-based health analytics
-
----
-
-## ✅ Conclusion
-The system demonstrates effective use of deep learning in poultry farming. Combining YOLOv8 and CNN enabled both detailed disease analysis and simple classification, offering valuable insights for proactive farm management.
+# Run Flask API
+python app.py
